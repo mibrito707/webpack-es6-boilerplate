@@ -21,12 +21,12 @@ A minimalistic Webpack 2 ES6 boilerplate project.
 - [ECMAScript 6](http://es6-features.org)
 - [Babel](https://babeljs.io/docs/setup/#installation) (v6.26.0)
 - [ESLint](https://eslint.org/docs/user-guide/getting-started) (v4.5.0)
-- [Jest](https://facebook.github.io/jest/docs/en/getting-started.html) (v20.0.4)
+- [Tape](https://github.com/substack/tape) (v13)
 - [Sass](http://sass-lang.com/guide)
 
 ## Start Dev Server
 
-1. `git clone https://github.com/jluccisano/webpack-es6-boilerplate.git`
+1. `git clone <repo-url>`
 2. Run `npm install`
 3. Start the dev server using `npm start`
 3. Open [http://localhost:9000](http://localhost:9000)

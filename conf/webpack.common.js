@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
-    filename: "[name].[contenthash].css"
+  filename: "[name].[contenthash].css"
 });
 
 module.exports = {
@@ -45,33 +45,33 @@ module.exports = {
           presets: ['env']
         }
       }
-    },{
-        test: /\.scss$/,
-        use: extractSass.extract({
-            use: [{
-                loader: "css-loader",
-                options: {
-                    sourceMap: true
-                }
-            }, {
-                loader: "sass-loader",
-                options: {
-                    sourceMap: true
-                }
-            }],
-            // use style-loader in development
-            fallback: "style-loader"
-        })
+    }, {
+      test: /\.scss$/,
+      use: extractSass.extract({
+        use: [{
+          loader: "css-loader",
+          options: {
+            sourceMap: true
+          }
+        }, {
+          loader: "sass-loader",
+          options: {
+            sourceMap: true
+          }
+        }],
+        // use style-loader in development
+        fallback: "style-loader"
+      })
     }]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'], {root: process.cwd()}),
+    new CleanWebpackPlugin(['dist'], { root: process.cwd() }),
     new webpack.optimize.CommonsChunkPlugin({
       name: "vendor"
     }),
     new HtmlWebpackPlugin({
       template: 'index.html'
     }),
-      extractSass
+    extractSass
   ]
 };

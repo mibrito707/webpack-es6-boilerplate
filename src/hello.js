@@ -1,3 +1,5 @@
-export default function sayHello() {
-	return 'Hello World!';
+module.exports = {
+	sayHello: function () {
+		return 'Hello World!';
+	}
 }
